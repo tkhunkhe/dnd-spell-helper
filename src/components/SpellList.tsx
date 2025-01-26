@@ -27,7 +27,7 @@ export default function SpellList({ spells }: SpellListProps) {
             <div
               key={spell.name}
               className={`p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer
-                ${selectedSpell?.name === spell.name ? 'bg-blue-100 border-blue-300' : ''}
+                ${selectedSpell?.name === spell.name ? 'bg-blue-100 border-blue-300 border-2' : ''}
                 ${hoveredSpell?.name === spell.name ? 'bg-blue-50 border-blue-200' : ''}`}
               onMouseEnter={() => setHoveredSpell(spell)}
               onMouseLeave={() => setHoveredSpell(null)}
