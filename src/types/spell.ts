@@ -1,5 +1,6 @@
 export interface Spell {
   name: string;
   content: string;
-  link?: string;
+  section: string;
+  link: string;
 } 
