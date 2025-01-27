@@ -16,5 +16,3 @@ The spell doesn’t take into account any possible circumstances that might chan
 If you cast this spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret.
 
 Spell Lists. Cleric, Druid (Optional), Wizard (Optional)
-
-https://dnd5e.wikidot.com/spell:divination
