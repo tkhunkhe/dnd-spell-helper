@@ -57,7 +57,7 @@ export default function SpellList({ spells }: SpellListProps) {
   const displaySpell = hoveredSpell || selectedSpell;
 
   return (
-    <div className="flex gap-6 h-[calc(100vh-8rem)]">
+    <div className="flex gap-6 h-[calc(100vh-4rem)]">
       {/* Left panel - Spell names list */}
       <div className="w-1/4  overflow-y-auto">
         <div className="mb-2">
