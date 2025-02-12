@@ -8,9 +8,9 @@ export default async function Home() {
   const spells = getSpells();
 
   return (
-    <main className="min-h-screen p-8 bg-gray-100">
+    <main className="min-h-screen p-4 py-2 bg-gray-100">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-3 text-gray-800">D&D Spell Helper</h1>
+        <h1 className="text-md font-bold mb-2 text-gray-800">D&D Spell Helper</h1>
         <SpellList spells={spells} />
       </div>
     </main>

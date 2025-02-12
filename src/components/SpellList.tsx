@@ -75,11 +75,11 @@ export default function SpellList({ spells }: SpellListProps) {
             {Object.values(collapsedSections).every(value => value) ? 'Expand All' : 'Collapse All'}
           </button>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-2">
           {spellsBySection.map(({ section, spells }) => (
-            <div key={section} className="bg-white rounded-lg p-3 shadow-md">
+            <div key={section} className="bg-white rounded-lg p-2 shadow-md">
               <h3
-                className="text-lg font-semibold text-gray-700 px-2 py-1 cursor-pointer flex justify-between items-center"
+                className="text-md font-semibold text-gray-700 p-1 cursor-pointer flex justify-between items-center"
                 onClick={() => toggleSection(section)}
               >
                 <span>{section}</span>
@@ -103,14 +103,14 @@ export default function SpellList({ spells }: SpellListProps) {
                   {spells.map((spell) => (
                     <div
                       key={spell.name}
-                      className={`p-2 cursor-pointer transition
+                      className={`p-1 cursor-pointer transition
                         ${selectedSpell?.name === spell.name ? 'font-bold text-blue-600' : 'text-gray-800'}
                         ${hoveredSpell?.name === spell.name ? 'bg-blue-50' : ''}`}
                       onMouseEnter={() => setHoveredSpell(spell)}
                       onMouseLeave={() => setHoveredSpell(null)}
                       onClick={() => handleSpellClick(spell)}
                     >
-                      <h2 className="text-md">{spell.name}</h2>
+                      <h2 className="text-sm">{spell.name}</h2>
                     </div>
                   ))}
                 </div>
@@ -124,11 +124,11 @@ export default function SpellList({ spells }: SpellListProps) {
       <div className="w-3/4 overflow-y-auto">
         <div className="min-h-full">
           {displaySpell ? (
-            <div className="p-6 bg-white rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b sticky top-0 bg-white z-10">
+            <div className="p-4 bg-white rounded-lg shadow-md">
+              <h2 className="text-lg font-bold text-gray-800 mb-6 pb-2 border-b sticky top-0 bg-white z-10">
                 {displaySpell.name}
               </h2>
-              <pre className="text-gray-600 whitespace-pre-wrap font-sans mb-4">
+              <pre className="text-gray-600 whitespace-pre-wrap font-sans mb-4 text-sm">
                 {displaySpell.content}
               </pre>
               <a 
@@ -141,7 +141,7 @@ export default function SpellList({ spells }: SpellListProps) {
               </a>
             </div>
           ) : (
-            <div className="p-6 bg-white rounded-lg shadow-md text-gray-500 italic">
+            <div className="p-4 text-sm bg-white rounded-lg shadow-md text-gray-500 italic">
               Hover over a spell to see its details
             </div>
           )}
